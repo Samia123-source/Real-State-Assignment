@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
+     "category_id": "1",
+    "image": "https://i.ibb.co.com/8LNDDWnd/image.png",
+    "estate_title": "Modern Single-Family Home",
+    "segment_name": "Single-Family Home",
+    "description": "A beautiful detached home with a spacious backyard, modern interior, and a peaceful neighborhood. Ideal for growing families.",
+    "price": "$385,000",
+    "status": "sale",
+    "area": "2500 sqft",
+    "location": "Gulshan, Dhaka",
+    "facilities": [
+      "Living Room",
+      "Modern Kitchen",
+      "Garage",
+      "Garden",
+      "3 Bedrooms",
+      "3 Bathrooms"
+    ]
+  },
+  {
+    "_id": "d1f6e9a4b2c34d8f9a1b5c6d7e8f9012",
+     "category_id": "2",
+    "image": "https://i.ibb.co.com/kgjrGDy3/image.png",
+    "estate_title": "Luxury Townhouse",
+    "segment_name": "Townhouse",
+    "description": "A stylish townhouse featuring elegant interiors, a rooftop terrace, and secure parking in a prime location.",
+    "price": "$295,000",
+    "status": "sale",
+    "area": "1900 sqft",
+    "location": "Banani, Dhaka",
+    "facilities": [
+      "Living Room",
+      "Kitchen",
+      "Rooftop Terrace",
+      "Garage",
+      "Balcony",
+      "24/7 Security"
+    ]
+  },
+  {
+     "_id": "8c3b7f1d9e2a4b5c8d6f7a9b0c1d2e3f",
+      "category_id": "3",
+    "image": "https://i.ibb.co.com/CpC1DH9t/image.png",
+    "estate_title": "City View Apartment",
+    "segment_name": "Apartment",
+    "description": "A modern apartment with stunning city views, open-concept living spaces, and premium amenities.",
+    "price": "$1,100/month",
+    "status": "rent",
+    "area": "1350 sqft",
+    "location": "Dhanmondi, Dhaka",
+    "facilities": [
+      "Living Room",
+      "Kitchen",
+      "Gym",
+      "Swimming Pool",
+      "Elevator",
+      "Parking"
+    ]
+  },
+  {
+    "_id": "f4a7c9d2b8e14f5a9c6d7e1b2a3f4c5d",
+      "category_id": "4",
+    "image": "https://i.ibb.co.com/svYM7zvH/image.png",
+    "estate_title": "Student Housing Residence",
+    "segment_name": "Student Housing",
+    "description": "Affordable and fully furnished accommodation close to universities with high-speed internet and study rooms.",
+    "price": "$300/month",
+    "status": "rent",
+    "area": "850 sqft",
+    "location": "Mohammadpur, Dhaka",
+    "facilities": [
+      "Shared Kitchen",
+      "Study Room",
+      "Wi-Fi",
+      "Laundry",
+      "24/7 Security",
+      "Common Lounge"
+    ]
+  },
+  {
+    "_id": "9e2d6f1a7b8c4d5e9f0a1b2c3d4e5f6a",
+     "category_id": "5",
+    "image": "https://i.ibb.co.com/b5M6s9b9/image.png",
+    "estate_title": "Senior Living Community",
+    "segment_name": "Senior Living",
+    "description": "A comfortable retirement community offering healthcare support, recreational facilities, and peaceful surroundings.",
+    "price": "$2,000/month",
+    "status": "rent",
+    "area": "1200 sqft",
+    "location": "Uttara, Dhaka",
+    "facilities": [
+      "Medical Assistance",
+      "Dining Hall",
+      "Fitness Center",
+      "Garden",
+      "Community Hall",
+      "24/7 Security"
+    ]
+  },
+  {
+    "_id": "5b7c9d1e3f4a6b8c0d2e4f6a8b1c3d5e",
+     "category_id": "6",
+    "image": "https://i.ibb.co.com/PGzHMKbL/image.png",
+    "estate_title": "Beachside Vacation Rental",
+    "segment_name": "Vacation Rental",
+    "description": "A fully furnished vacation home perfect for family holidays with breathtaking sea views and private outdoor space.",
+    "price": "$180/night",
+    "status": "rent",
+    "area": "1800 sqft",
+    "location": "Cox's Bazar, Bangladesh",
+    "facilities": [
+      "Living Room",
+      "Modern Kitchen",
+      "Swimming Pool",
+      "Sea View Balcony",
+      "Free Wi-Fi",
+      "Private Parking"
+    ]
+  }
+]
