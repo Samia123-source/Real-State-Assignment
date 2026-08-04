@@ -7,7 +7,7 @@ const ProjectCard = ({estate}) => {
    
      <div className="card bg-base-100 w-90 shadow-sm">
   <figure  className="w-full h-80 overflow-hidden">
-   <Link to={`/project/${_id}`}> <img className="w-full h-full object-cover hover:scale-105"
+   <Link to={`/projectdetails/${_id}`}> <img className="w-full h-full object-cover hover:scale-105"
       src={image} alt="house" /></Link>
      
   </figure>

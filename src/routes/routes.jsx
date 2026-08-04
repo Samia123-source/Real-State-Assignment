@@ -4,8 +4,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
-import Project from "../Pages/Project/Project";
 import Root from "../Layout/Root";
+import ProjectDetails from "../Pages/Project/ProjectDetails";
+import Project from "../Pages/Project/Project";
 
 const routes = createBrowserRouter([
     {
@@ -25,9 +26,13 @@ const routes = createBrowserRouter([
                 path:'/register',
                 element:<Register></Register>
             },
+             {
+                path:'/projects',
+                element:<Project></Project>
+            },
             {
-                path:'/project/:id',
-                element:<Project></Project>,
+                path:'/projectdetails/:id',
+                element:<ProjectDetails></ProjectDetails>,
                 loader:()=> fetch('./estate.json')
             }
         ]
