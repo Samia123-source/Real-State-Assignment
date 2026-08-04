@@ -27,8 +27,8 @@ const routes = createBrowserRouter([
             },
             {
                 path:'/project/:id',
-                element:<Project></Project>
-                
+                element:<Project></Project>,
+                loader:()=> fetch('./estate.json')
             }
         ]
     }

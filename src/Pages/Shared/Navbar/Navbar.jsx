@@ -4,7 +4,7 @@ import userDefaultPic from '../../../assets/user.png'
 const Navbar = () => {
 const navLinks = <>
 <li><NavLink to='/'>Home</NavLink></li> 
-<li><NavLink to='/project'>Project</NavLink></li>     
+<li><NavLink to='/'>Project</NavLink></li>
 <li><NavLink to='/login'>Login</NavLink></li>     
 <li><NavLink to='/register'>Register</NavLink></li>     
     
