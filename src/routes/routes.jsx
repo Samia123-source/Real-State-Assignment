@@ -13,9 +13,10 @@ const routes = createBrowserRouter([
         element: <Root></Root>,
         children:[
             {
-                path: '/',
-                element: <Home></Home>
-            },
+                 loader: async () => {
+    const res = await fetch("./estate.json");
+    return res.json();
+  },
             {
                 path:'/login',
                 element: <Login></Login>
