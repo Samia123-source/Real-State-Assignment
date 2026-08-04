@@ -13,7 +13,7 @@ const navLinks = <>
 
 
   return (
-  <div className="navbar bg-black bg-opacity-20 w-full lg:px-10 lg:py-2 flex-row justify-between absolute shadow-sm flex ">
+  <div className="navbar bg-black bg-opacity-25 w-full lg:px-10 lg:py-2 flex-row justify-between absolute shadow-sm flex ">
   <div className="">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -14,7 +14,7 @@ console.log(estate);
     <div>
 
       <div>
-        <Navbar></Navbar>
+
         <Banner></Banner>
 
 

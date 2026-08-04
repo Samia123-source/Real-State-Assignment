@@ -1,5 +1,5 @@
-import { useLoaderData, useParams } from "react-router-dom"
-import Navbar from "../Shared/Navbar/Navbar"
+
+
 
 
 const Project = () => {
@@ -8,9 +8,10 @@ const Project = () => {
 
   return (
 
-    <div>
-     
-     <div>this is the project page </div>
+   <div>
+    
+  
+
     </div>
   )
 }
