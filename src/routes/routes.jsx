@@ -26,8 +26,9 @@ const routes = createBrowserRouter([
                 element:<Register></Register>
             },
             {
-                path:'/project',
+                path:'/project/:id',
                 element:<Project></Project>
+                
             }
         ]
     }

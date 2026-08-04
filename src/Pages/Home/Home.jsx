@@ -8,8 +8,7 @@ import ProjectCard from "./ProjectCard";
 const Home = () => {
   const estate = useLoaderData();
 console.log(estate);
-console.log(typeof estate);
-console.log(Array.isArray(estate));
+
 
   return (
     <div>
@@ -29,7 +28,7 @@ console.log(Array.isArray(estate));
         <div>
           <p className="text-5xl text-center my-12 font-bold ">Project</p>
           {/* project container */}
-          <div>
+          <div className="grid grid-cols-3 gap-3">
             {
               estate?.map(house => (
                 <ProjectCard
