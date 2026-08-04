@@ -6,7 +6,7 @@ const Register = () => {
   return (
    
     <div>
-      <Navbar></Navbar>
+      
       <h2 className="text-3xl text-center my-10">Register Your Account</h2>
       <form>
         <fieldset className="fieldset">

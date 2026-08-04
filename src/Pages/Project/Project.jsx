@@ -9,7 +9,7 @@ const Project = () => {
   return (
 
     <div>
-      <Navbar></Navbar>
+     
      <div>this is the project page </div>
     </div>
   )

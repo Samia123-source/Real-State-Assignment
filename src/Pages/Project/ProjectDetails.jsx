@@ -32,7 +32,7 @@ const ProjectDetails = () => {
   return (
 
     <div>
-      <Navbar></Navbar>
+     
       <div className="max-w-5xl mx-auto px-4 py-10">
         <figure className="w-full h-96 overflow-hidden rounded-lg">
           <img className="w-full h-full object-cover" src={image} alt={estate_title} />
