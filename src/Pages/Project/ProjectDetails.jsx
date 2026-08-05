@@ -4,14 +4,13 @@ import Navbar from "../Shared/Navbar/Navbar"
 
 const ProjectDetails = () => {
 
-  const { id } = useParams();
-  const estates = useLoaderData();
-  const estate = estates.find(estate => estate._id === id);
+  const { _id } = useParams();
+  const estates = useLoaderData(); 
+  const estate = estates.find(estate => estate._id === _id);
 
   if (!estate) {
     return (
-      <div>
-        <Navbar></Navbar>
+      <div>        
         <p className="text-center py-10">Estate not found.</p>
       </div>
     )

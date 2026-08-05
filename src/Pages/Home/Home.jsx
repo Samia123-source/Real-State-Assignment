@@ -7,8 +7,10 @@ import ProjectCard from "./ProjectCard";
 
 const Home = () => {
   const estate = useLoaderData();
-console.log(estate);
+// console.log(estate);
 
+console.log("Home loader data:", estate);
+console.log("Is array:", Array.isArray(estate));
 
   return (
     <div>
@@ -30,7 +32,7 @@ console.log(estate);
           {/* project container */}
           <div className="grid grid-cols-3 gap-3">
             {
-              estate?.map(house => (
+              estate.map(house => (
                 <ProjectCard
                   key={house._id}
                   estate={house}

@@ -27,13 +27,16 @@ const routes = createBrowserRouter([
                 element:<Register></Register>
             },
              {
-                path:'/projects',
+                path:'/project',
                 element:<Project></Project>
             },
             {
-                path:'/projectdetails/:id',
+                path:'/projectdetails/:_id',
                 element:<ProjectDetails></ProjectDetails>,
-                loader:()=> fetch('./estate.json')
+               loader: async () => {
+  const res = await fetch("/estate.json");
+  return res.json();
+}
             }
         ]
     }
