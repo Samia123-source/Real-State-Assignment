@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom"
 import Navbar from "../Shared/Navbar/Navbar"
 import Register from "../Register/Register"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { AuthContext } from "../../Providers/AuthProvider"
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = e => {
     e.preventDefault();
@@ -39,7 +41,15 @@ const Login = () => {
             <label className="text-start justify-self-start">Email</label>
             <input type="email" className="input w-full mb-2" name="email" placeholder="Email" />
             <label className="text-start justify-self-start">Password</label>
-            <input type="password" className="input w-full" name="password" placeholder="Password" />
+            <input type= {showPassword ? 'text':"password"} className="input w-full" name="password" placeholder="Password" />
+            
+            <span className="absolute" onClick={() =>
+               setShowPassword(!showPassword)}>
+               {
+                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+               }
+                </span>
+            
             <div><a className="link link-hover">Forgot password?</a></div>
             <button className="btn btn-neutral mt-4 w-full">Login</button>
           </fieldset>

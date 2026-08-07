@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom"
 import Navbar from "../Shared/Navbar/Navbar"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { AuthContext } from "../../Providers/AuthProvider"
 
 
 const Register = () => {
+  const[registerError, setRegisterError] = useState('');
+  const[success, setSuccess] = useState('');
+
   const{createUser} = useContext(AuthContext);
 
     const handleRegister = e => {
@@ -17,14 +20,21 @@ const Register = () => {
     const password = form.get('password')
     console.log(name, photo, email,password);
 
+    //reset error
+
+    setRegisterError('');
+    setSuccess('');
+
     //create user
 
       createUser(email, password)
         .then(result => {
           console.log(result.user)
+          setSuccess('User created Successfully.')
         })
         .catch(error => {
-          console.error(error)
+          console.error(error);
+          setRegisterError(error.message);
         })
   }
 
@@ -45,11 +55,18 @@ const Register = () => {
           <input type="email" className="input w-full mb-2" name="email" required placeholder="Email" />
           <label className="text-start justify-self-start">Password</label>
           <input type="password" className="input w-full" name="password" required  placeholder="Password" />
-          
+          <div className="flex gap-2 justify-self-start"> <input type="checkbox" defaultChecked className="checkbox size-3"/> <p>Accept term and conditions</p></div>
           <button className="btn btn-neutral mt-4 w-full">Register</button>
         </fieldset>
     </form>
-              <p className="text-center mt-4 mb-16 ">Do you not have an account? <Link className="text-blue-600 font-bold ml-2" to='/login'>Login</Link> </p>
+    {
+      registerError && <p className="text-red-700">{registerError}</p>
+    }
+    {
+      success && <p className="text-green-700">{success}</p>
+    }
+   
+    <p className="text-center mt-4 mb-16 ">Do you not have an account? <Link className="text-blue-600 font-bold ml-2" to='/login'>Login</Link> </p>
 
     </div>
     </div>

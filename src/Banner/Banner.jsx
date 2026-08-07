@@ -2,6 +2,7 @@ import Navbar from "../Pages/Shared/Navbar/Navbar"
 
 
 const Banner = () => {
+ 
   return (
     <div className="carousel w-full h-screen">
      {/* Slide one */}
