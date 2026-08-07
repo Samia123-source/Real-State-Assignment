@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Navbar from "../Shared/Navbar/Navbar"
 import Register from "../Register/Register"
 import { useContext, useState } from "react"
@@ -9,6 +9,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = e => {
     e.preventDefault();
@@ -21,6 +22,7 @@ const Login = () => {
     signIn(email, password)
       .then(result => {
         console.log(result.user)
+        navigate('/')
       })
       .catch(error => {
         console.error(error);
@@ -41,14 +43,16 @@ const Login = () => {
             <label className="text-start justify-self-start">Email</label>
             <input type="email" className="input w-full mb-2" name="email" placeholder="Email" />
             <label className="text-start justify-self-start">Password</label>
-            <input type= {showPassword ? 'text':"password"} className="input w-full" name="password" placeholder="Password" />
-            
-            <span className="absolute" onClick={() =>
-               setShowPassword(!showPassword)}>
-               {
-                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
-               }
-                </span>
+            <div className="relative w-full">
+              <input type= {showPassword ? 'text':"password"} className="input w-full" name="password" placeholder="Password" />
+
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" onClick={() =>
+                 setShowPassword(!showPassword)}>
+                 {
+                  showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                 }
+                  </span>
+            </div>
             
             <div><a className="link link-hover">Forgot password?</a></div>
             <button className="btn btn-neutral mt-4 w-full">Login</button>
