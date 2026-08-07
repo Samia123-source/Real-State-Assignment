@@ -13,7 +13,7 @@ const handleSignOut = () => {
 
 const navLinks = <>
 <li><NavLink to='/'>Home</NavLink></li> 
-<li><NavLink to='/projects'>Project</NavLink></li>
+<li><NavLink to='/project'>Project</NavLink></li>
 <li><NavLink to='/login'>Login</NavLink></li>     
 <li><NavLink to='/register'>Register</NavLink></li>     
     
@@ -42,13 +42,18 @@ const navLinks = <>
     </ul>
   </div>
   <div className=" ">
-    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img
-            alt="Tailwind CSS Navbar component"
-            src={userDefaultPic}/>
+    {
+      user &&
+      <Link to='/profile'>
+        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full">
+            <img
+              alt="Profile"
+              src={user?.photoURL || userDefaultPic}/>
+          </div>
         </div>
-      </div>
+      </Link>
+    }
 
       {
         user ? 

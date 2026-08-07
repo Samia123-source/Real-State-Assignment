@@ -18,7 +18,7 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader:()=> fetch('./estate.json')
+                loader: () => fetch('/estate.json')
             },
             {
                 path:'/login',
@@ -28,17 +28,20 @@ const routes = createBrowserRouter([
                 path:'/register',
                 element:<Register></Register>
             },
-             {
-                path:'/project',
-                element:<Project></Project>
+            {
+                path: '/project',
+                element: <Project></Project>,
+                  loader: async () => {
+                    const res = await fetch("/estate.json");
+                    return res.json();}
             },
             {
-                path:'/projectdetails/:_id',
-                element:<PrivateRoute><ProjectDetails></ProjectDetails></PrivateRoute>,
-               loader: async () => {
-  const res = await fetch("/estate.json");
-  return res.json();
-}
+                path: '/projectdetails/:_id',
+                element: <PrivateRoute><ProjectDetails></ProjectDetails></PrivateRoute>,
+                loader: async () => {
+                    const res = await fetch("/estate.json");
+                    return res.json();
+                }
             },
             {
                 path:'/profile',
